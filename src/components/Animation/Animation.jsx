@@ -64,8 +64,10 @@ function Animation() {
         return () => {
             pinAnimation.kill();
             opacityAnimation.kill();
+            maskAnimation.kill();
             window.removeEventListener('resize', handleResize);
         }
+        // eslint-disable-next-line
     }, []);
 
     return (
